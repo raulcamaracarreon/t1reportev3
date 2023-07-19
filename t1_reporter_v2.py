@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+import textwrap
 
 st.set_page_config(page_title="T1 Reporteador Mejoredu", page_icon=":bar_chart:", layout='centered', initial_sidebar_state='auto')
 
@@ -345,7 +346,7 @@ if password == 't1mejoredu2023':
     figura_etiqueta = figuras[figura_seleccionada]
 
     # Divide el reactivo en líneas
-    lineas = [reactivo[i:i+caracteres_por_linea] for i in range(0, len(reactivo), caracteres_por_linea)]
+    lineas = textwrap.wrap(reactivo, caracteres_por_linea)
 
     # Une las líneas con el carácter de nueva línea
     reactivo = '\n'.join(lineas)
