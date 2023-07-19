@@ -306,6 +306,8 @@ if password == 't1mejoredu2023':
         inciso_seleccionado = ''
 
     subconjunto_df = df.loc[categorias[categoria1]]
+    # Configurar el nombre del índice
+    subconjunto_df.index.name = categoria1
     subconjunto_df = subconjunto_df.fillna(0)
 
     # Filtrar por las columnas que corresponden al inciso seleccionado y a la escala del reactivo
