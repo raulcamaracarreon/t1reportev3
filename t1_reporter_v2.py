@@ -376,7 +376,7 @@ if password == 't1mejoredu2023':
 
 
     # Crea la gráfica de barras apiladas
-    colores = ["#8B00FF", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#FF0000" ]
+    colores = ["#0000FF", "#FF7F00", "#FFFF00", "#8B00FF", "#00FF00",  "#4B0082", "#FF0000" ]
 
     if 'Total' in subconjunto_df.index:
         ax = subconjunto_df.drop('Total', axis=0).plot(kind='bar', stacked=True, color=colores)
